@@ -1,0 +1,5 @@
+---
+text/plain:
+- !ruby/regexp /^You have new Picture Mail! Click Go/View to see now./
+- !ruby/regexp /^You have new Video Mail! Click Go/View to see now./
+

@@ -1,0 +1,18 @@
+<h1>Listing clips</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  
+<% for clip in @clips %>
+  <tr>
+    <td><%=h clip.title %></td>
+    <td><%= button_to 'Add to playlist', :controller => 'playlists', :action => 'add', :id => clip.id %></td>
+    <!-- <td><%#= link_to 'Edit', edit_clip_path(clip) %></td>
+    <td><%#= link_to 'Destroy', clip, :confirm => 'Are you sure?', :method => :delete %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<br />

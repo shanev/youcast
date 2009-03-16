@@ -1,0 +1,2 @@
+module FeaturedClipsHelper
+end

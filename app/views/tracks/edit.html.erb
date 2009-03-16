@@ -1,0 +1,12 @@
+<h1>Editing track</h1>
+
+<%= error_messages_for :track %>
+
+<% form_for [@track.playlist, @track] do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @track %> |
+<%= link_to 'Back', tracks_path %>

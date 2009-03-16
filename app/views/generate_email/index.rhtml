@@ -1,0 +1,14 @@
+
+Email video to: <%= @your_email %> 
+<br/>
+or upload:
+<%= form_tag({:action=>'save_video'}, :multipart => true)%>
+ <input type="file" name="video_file" />
+ <input type="submit" name="Upload" />
+</form>
+
+<embed src="/swf/mediaplayer.swf" width="320" height="340" allowfullscreen="true" flashvars="&displayheight=240&file=playlist.xml&height=340&width=320" />
+
+<p>
+<%= link_to "Logout", { :controller => "account", :action => "logout" } %>
+</p>

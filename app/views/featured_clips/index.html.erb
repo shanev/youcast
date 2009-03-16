@@ -1,0 +1,24 @@
+<h1>Listing clips</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Location</th>
+    <th>User</th>
+  </tr>
+  
+<% for clip in @clips %>
+  <tr>
+    <td><%=h clip.title %></td>
+    <td><%=h clip.location %></td>
+    <td><%=h clip.user_id %></td>
+    <td><%= link_to 'Show', clip %></td>
+    <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
+    <td><%= link_to 'Destroy', clip, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New clip', new_clip_path %>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>YouCast</title>
+	<%= stylesheet_link_tag 'reset-fonts-grids', 'application' %>
+  <%= javascript_include_tag 'prototype' %>
+</head>
+
+<body>
+	<div id="doc" class="yui-t4">
+		<div id="hd">
+			<div class="yui-ge">
+				<div class="yui-u first">
+					<h1>YouCast</h1>					
+				</div>
+				<div class="yui-u">
+					<% if logged_in? %>
+						<%= button_to "Logout", session_path, :confirm => "Are you sure?", :method => :delete %>					
+					<% else %>
+						<ul>
+							<li><%= link_to "Sign up", new_user_path %></li>
+							<li><%= link_to "Log in", new_session_path %></li>
+						</ul>
+					<% end %>
+				</div> 
+			</div>
+			<% if flash.any? %>
+        <div id="flash">
+          <p style="color: green"><%= flash[:notice] %></p>
+          <%= flash[:warn] %>
+          <%= flash[:error] %>
+        </div>
+        <% flash.clear %>
+      <% end %>
+      
+		</div>
+	
+	  <div id="bd">
+			<div id="yui-main">
+				<div class="yui-b">
+					<div class="yui-g">
+						<%= yield %>
+					</div>
+				</div>
+			</div>
+			<% if logged_in? %>
+				<div class="yui-b" id="sidebar">
+					<ul>
+						<li class="navitem"><%= link_to_unless_current "My Player", home_path, :class => "raw" %></li>
+						<li class="navitem"><%= link_to_unless_current "My Playlist", playlist_path(@playlist), :class => "raw" %></li>
+						<li class="navitem"><%= link_to_unless_current "My Uploads", clips_path, :class => "raw" %></li>
+						<!-- <li class="navitem"><%#= link_to_unless_current "Featured Media", featured_clips_path, :class => "raw" %></li> -->
+					</ul>
+				</div>
+			<% end %>
+		</div>
+  
+		<div id="ft">
+		</div>
+	</div>
+</body>
+</html>

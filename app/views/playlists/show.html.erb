@@ -1,0 +1,10 @@
+<h2>Playlist for <%= current_user.login %></h2>
+
+<% @playlist.tracks.each do |track| %>
+	<p>
+		<%= render_thumbnail(track) %> <%= track.title %>
+		<!-- <%#= link_to "Edit", edit_playlist_track_path(@playlist, track) %>
+		<%#= link_to "Delete", playlist_track_path(@playlist, track), :confirm => "Are you sure?", :method => :delete %> -->
+	</p>
+<% end %>
+

@@ -1,0 +1,27 @@
+<h1>Editing clip</h1>
+
+<%= error_messages_for :clip %>
+
+<% form_for(@clip) do |f| %>
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <b>Location</b><br />
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <b>User</b><br />
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @clip %> |
+<%= link_to 'Back', clips_path %>

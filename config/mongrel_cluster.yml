@@ -1,0 +1,7 @@
+--- 
+cwd: /usr/local/www/upload.shanesbrain.net/current
+port: 1024
+environment: production
+address: 127.0.0.1
+pid_file: log/mongrel.pid
+servers: 2

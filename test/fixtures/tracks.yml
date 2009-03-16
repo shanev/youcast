@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  playlist_id: 1
+  title: MyString
+  creator: MyString
+  location: MyString
+  info: MyString
+  image: MyString
+  identifier: MyString
+  album: MyString
+two:
+  id: 2
+  playlist_id: 1
+  title: MyString
+  creator: MyString
+  location: MyString
+  info: MyString
+  image: MyString
+  identifier: MyString
+  album: MyString

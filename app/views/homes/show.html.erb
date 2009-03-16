@@ -1,0 +1,7 @@
+<embed src="<%= SWF_URL %>/mediaplayer.swf" width="480" height="480" allowfullscreen="true" flashvars="&displayheight=380&file=<%= formatted_playlist_path(@playlist, :xml) %>&height=480&width=480" />
+
+<%= button_to "Upload new media", new_clip_path %><br/>
+
+<p>Code for this player: </p>
+<p><pre><small>&lt;embed src="<%= SWF_URL %>/mediaplayer.swf" width="480" height="480"<br/> allowfullscreen="true" flashvars="&displayheight=380<br/>&file=<%= formatted_playlist_url(@playlist, :xml).to_s %>&height=480&width=480" /&gt;
+</pre></small></p>

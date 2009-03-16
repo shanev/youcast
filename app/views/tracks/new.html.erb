@@ -1,0 +1,11 @@
+<h1>New track</h1>
+
+<%= error_messages_for :track %>
+
+<% form_for([@track.playlist, @track]) do |f| %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', playlist_tracks_path(@playlist) %>

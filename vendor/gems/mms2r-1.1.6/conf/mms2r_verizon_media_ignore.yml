@@ -1,0 +1,4 @@
+--- 
+text/plain: 
+- !ruby/regexp /^This message was sent using PIX-FLIX Messaging service from Verizon Wireless!.*$/
+

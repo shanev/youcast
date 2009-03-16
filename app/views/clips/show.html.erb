@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @clip.title %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @clip.location %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @clip.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_clip_path(@clip) %> |
+<%= link_to 'Back', clips_path %>

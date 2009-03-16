@@ -1,0 +1,43 @@
+YouCast™ is an open source Ruby on Rails video sharing application that you host on your own servers. It can be rebranded easily for your company or used as is.  It is similar to a very simplified YouTube.  Upload videos in any format and view them in the included Flash player.  It doesn't do background processing of video yet.
+
+Main features:
+
+Upload videos, images, and music via web or mobile phone via SMS/MMS attachment
+Create a playlist of your videos, images, and music
+Play your media in a Flash player
+Get the code for the player to embed in any site (myspace, blog, etc)
+Generates thumbnails for videos
+Multi-user support with user login and user management
+Export your playlist in XSPF/Spiff format
+
+Tech specs:
+
+Ruby on Rails application designed with RESTful methodology
+Supports all major video and image formats, and mp3 for music
+Encodes all video to Flash
+Uses MMS2R for mobile media processing
+XSPF/Spiff format used for playlists for maximum portability
+
+What can you do with YouCast™?
+
+Create an internal video sharing site for your company or small business
+Use it as a base for your own video-related site
+Merge it with your existing site to add video and mobile media support
+Re-create YouTube to impress your friends
+
+How much does it cost?
+
+YouCast™ is free, but please consider donating to the project via GitHub.
+
+Installing ffmpeg
+-----------------
+http://www.thisismobility.com/blog/?p=156
+ffmpeg sources + AMR 3gpp files: /vendors/ffmpeg
+http://vexxhost.com/blog/2007/03/03/installing-ffmpeg-ffmpeg-php-mplayer-mencoder-flv2tool-lame-mp3-encoder-libogg-%E2%80%93-the-easy-way/
+
+# Install LAME
+# compile ffmpeg from source in vendor/ffmpeg
+# copy files for amr from 3gp site (included in vendor/ffmpeg)
+# copy amr files into libavcodec (included in vendor/ffmpeg)
+# compile with gmake
+# ./configure --enable-shared --enable-libmp3lame --enable-amr-nb --enable-amr-wb --extra-cflags=-I/usr/local/include --extra-ldflags=-L/usr/local/lib

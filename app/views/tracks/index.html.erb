@@ -1,0 +1,18 @@
+<h1>Listing tracks</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for track in @tracks %>
+  <tr>
+    <td><%= link_to 'Show', track %></td>
+    <td><%= link_to 'Edit', playlist_edit_track_path(track.playlist, track) %></td>
+    <td><%= link_to 'Destroy', track, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New track', playlist_new_track_path(@playlist) %>

@@ -1,0 +1,16 @@
+<h1>New clip</h1>
+
+<%= error_messages_for :clip %>
+
+Email video to: <b><%= @your_email %></b> using your mobile phone,
+<br/>
+or upload:
+<% form_for Clip.new(:user_id => current_user.id), :html => { :multipart => true } do |f| -%>
+	<p>File: <%= f.file_field :uploaded_data %></p>
+	<p>Title: <%= f.text_field :title %></p>
+	<p><%= f.submit "Send" %>
+<% end %>
+
+<p>Note: It will take a few minutes after you upload for your video to show up in your playlist.</p>
+
+<%= link_to 'Back', { :controller => 'home', :action => 'index' } %>

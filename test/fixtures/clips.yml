@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  title: My Video
+  location: MyString
+  user_id: 1
+  created_at: #{Time.now :db}
+  updated_at: #{Time.now :db}
+two:
+  id: 2
+  title: MyString
+  location: MyString
+  user_id: 1
+  created_at: #{Time.now :db}
+  updated_at: #{Time.now :db}
+  
